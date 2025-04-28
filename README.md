@@ -44,19 +44,27 @@ Se o arquivo `livros.xml` não existir ou estiver vazio, ele é criado automatic
 
 1. Instale as dependências:
 
+```bash
 pip install -r requirements.txt
+```
 
 2. Instale o FastAPI e o Uvicorn: 
 
+```bash
 pip install fastapi uvicorn
+```
 
 3. Rode o servidor:
 
+```bash
 python -m uvicorn app.main:app --reload
+```
 
 4. Acesse a documentação interativa (Swagger UI) em:
 
+```bash
 http://127.0.0.1:8000/docs
+```
 
 ## Exemplo de Requisição JSON para Criar Livro
 
