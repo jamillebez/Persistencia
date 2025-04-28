@@ -1,0 +1,51 @@
+<livros>
+  <livro>
+    <id>1</id>
+    <titulo>Dom Quixote</titulo>
+    <autor>Miguel de Cervantes</autor>
+    <ano>1605</ano>
+    <genero>Romance</genero>
+  </livro>
+  <livro>
+    <id>2</id>
+    <titulo>O Primo Basílio</titulo>
+    <autor>José de Alencar</autor>
+    <ano>1866</ano>
+    <genero>Romance</genero>
+  </livro>
+  <livro>
+    <id>3</id>
+    <titulo>Memórias Póstumas de Brás Cubas</titulo>
+    <autor>Machado de Assis</autor>
+    <ano>1881</ano>
+    <genero>Romance</genero>
+  </livro>
+  <livro>
+    <id>4</id>
+    <titulo>O Cortiço</titulo>
+    <autor>Aluísio Azevedo</autor>
+    <ano>1890</ano>
+    <genero>Naturalismo</genero>
+  </livro>
+  <livro>
+    <id>5</id>
+    <titulo>Grande Sertão: Veredas</titulo>
+    <autor>João Guimarães Rosa</autor>
+    <ano>1956</ano>
+    <genero>Literatura Brasileira</genero>
+  </livro>
+  <livro>
+    <id>6</id>
+    <titulo>A Moreninha</titulo>
+    <autor>Joaquim Manuel de Macedo</autor>
+    <ano>1844</ano>
+    <genero>Romance</genero>
+  </livro>
+  <livro>
+    <id>7</id>
+    <titulo>Dom Casmurro</titulo>
+    <autor>Machado de Assis</autor>
+    <ano>1899</ano>
+    <genero>Romance</genero>
+  </livro>
+</livros>
