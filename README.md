@@ -44,6 +44,7 @@ Se o arquivo `livros.xml` não existir ou estiver vazio, ele é criado automatic
 
 1. Instale as dependências:
 
+```json
 pip install -r requirements.txt
 
 2. Instale o FastAPI e o Uvicorn: 
