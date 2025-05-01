@@ -43,8 +43,7 @@ def escrever_livros(livros: List[Livro]):
 def salvar_xml_formatado(tree: ET.ElementTree):
     xml_str = ET.tostring(tree.getroot(), 'utf-8')
     parsed_str = xml.dom.minidom.parseString(xml_str)
-    # Remover a declaração XML
     pretty_xml = parsed_str.toprettyxml(indent="  ", newl='\n')
-    pretty_xml = "\n".join(pretty_xml.splitlines()[1:])  # Remove the first line with XML declaration
+    pretty_xml = "\n".join(pretty_xml.splitlines()[1:])  
     with open(XML_FILE, 'w', encoding='utf-8') as f:
         f.write(pretty_xml)
