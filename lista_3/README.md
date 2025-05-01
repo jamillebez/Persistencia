@@ -51,16 +51,22 @@ pip install -r requirements.txt
 2. Instale o FastAPI e o Uvicorn: 
 
 ```bash
-pip install fastapi uvicorn
+pip install fastapi
 ```
 
-3. Rode o servidor:
+3. Instale o FastAPI e o Uvicorn: 
+
+```bash
+pip install uvicorn
+```
+
+4. Rode o servidor:
 
 ```bash
 python -m uvicorn app.main:app --reload
 ```
 
-4. Acesse a documentação interativa (Swagger UI) em:
+5. Acesse a documentação interativa (Swagger UI) em:
 
 ```bash
 http://127.0.0.1:8000/docs
