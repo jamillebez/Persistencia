@@ -24,4 +24,5 @@ class Livro(BaseModel):
         return values
 
     class Config:
+        title = "Livro"
         anystr_strip_whitespace = True  
