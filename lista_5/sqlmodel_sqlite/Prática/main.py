@@ -3,13 +3,16 @@ from database import create_db_and_tables
 from routers import equipes, membros, projetos, tarefas, memberships
 
 
-app = FastAPI()
+app = FastAPI(
+title="TeamWork",
+description="Sistema de Gestão Colaborativa",
+)
 
 @app.on_event("startup")
 def on_startup():
     create_db_and_tables()
     
-@app.get("/")
+@app.get("/", tags=["Home"], summary="Página inicial")
 def home():
     return {"mensagem": "Bem vindo"}
 
