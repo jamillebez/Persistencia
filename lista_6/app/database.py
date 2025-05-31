@@ -2,9 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = "postgresql://postgres:xxxxxx@localhost:5432/postgres?connect_timeout=10&sslmode=prefer" #trocar a senha
+DATABASE_URL = "postgresql://postgres:260421@localhost:5432/blogdb"
 
-engine = create_engine("postgresql://postgres:xxxxxx@localhost:5432/postgres?connect_timeout=10&sslmode=prefer")
+engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 

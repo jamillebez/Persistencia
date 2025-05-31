@@ -18,14 +18,33 @@ class CategorySchema(CategoryCreateSchema):
     class Config:
         orm_mode = True
 
+class CategoryWithPostCountSchema(BaseModel):
+    category: CategorySchema
+    post_count: int
+
+    class Config:
+        orm_mode = True
+
 class PostCreateSchema(BaseModel):
     title: str
     content: str
     author_id: int
-    category: List[int] = []
+    categories: List[int] = []
 
 class PostSchema(PostCreateSchema):
     id: int
+    categories: List[CategorySchema] = []  # para retornar as categorias com detalhes
+    class Config:
+        orm_mode = True
+
+class PostWithCommentCountSchema(BaseModel):
+    id: int
+    title: str
+    content: str
+    author_id: int
+    categories: List[CategorySchema] = []  # lista das categorias do post
+    comment_count: int  # novo campo para contagem de comentários
+
     class Config:
         orm_mode = True
 

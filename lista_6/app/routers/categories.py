@@ -1,18 +1,18 @@
+from fastapi import Query, Depends
+from sqlalchemy.orm import Session
 from fastapi_crudrouter import SQLAlchemyCRUDRouter
-from app.models import User, Post, Comment, Category, Like
-from app.schemas import (
-    UserSchema, UserCreateSchema,
-    PostSchema, PostCreateSchema,
-    CommentSchema, CommentCreateSchema,
-    CategorySchema, CategoryCreateSchema,
-    LikeSchema, LikeCreateSchema
-)
+from app.models import Category
+from app.schemas import CategorySchema, CategoryCreateSchema
 from app.database import get_db
 
-category_router = SQLAlchemyCRUDRouter(
+class CategoryRouter(SQLAlchemyCRUDRouter):
+    def list(self, skip: int = Query(0, ge=0), limit: int = Query(10, gt=0, le=100), db: Session = Depends(get_db)):
+        return db.query(self.db_model).offset(skip).limit(limit).all()
+
+category_router = CategoryRouter(
     schema=CategorySchema,
     create_schema=CategoryCreateSchema,
     db_model=Category,
     db=get_db,
-    prefix="categories"
+    prefix="categories",
 )
